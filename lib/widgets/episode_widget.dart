@@ -47,14 +47,22 @@ class Episode extends StatelessWidget {
               const SizedBox(
                 width: 10,
               ),
-              Text(episode.title.length > 17 ? '${episode.title.substring(0, 17)}...' : episode.title,
-                  style: TextStyle(
-                    color: Colors.cyan.shade900,
-                    fontSize: 16,
-                  )
-              ),
-              Icon((Icons.chevron_right_outlined),
-                color: Colors.cyan.shade900,
+              Container(
+                width: 220,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(episode.title.length > 17 ? '${episode.title.substring(0, 17)}...' : episode.title,
+                        style: TextStyle(
+                          color: Colors.cyan.shade900,
+                          fontSize: 16,
+                        )
+                    ),
+                    Icon((Icons.chevron_right_outlined),
+                      color: Colors.cyan.shade900,
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
